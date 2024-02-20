@@ -1,0 +1,46 @@
+{
+  "LeftSidebar": {
+    "tyres": "Riepas",
+    "rims": "Diski",
+    "browse": "Pārlūkot",
+    "information": "Informācija",
+    "add": "Pievienot",
+    "discs": "Diski",
+    "cart": "Grozs",
+    "myOrders": "Mani pasūtījumi",
+    "butteries": "Sviestas",
+    "english": "Angļu"
+  },
+  "Header": {
+    "home": "Mājas",
+    "client": "Klients"
+  },
+  "Offers": {
+    "contacts": "Kontakti",
+    "basicDiscounts": "Pamata atlaidi"
+  },
+  "BasicDiscount": {
+    "car": "AUTOMAŠĪNA",
+    "tire": "RIEPA",
+    "engine": "DZINĒJS",
+    "Tires": "Riepas",
+    "Summer": "Vasaras",
+    "Winter": "Ziemas"
+  },
+  "Contacts": {
+    "workingTime": "Darba laiks",
+    "storeAddress": "Veikala / Noliktavas adrese",
+    "officePhone": "Biroja telefona numurs",
+    "e-mail": "E-pasts",
+    "phone": "Telefona numurs"
+  },
+  "OrderInformation": {
+    "firstTitle": "Uzziniet informāciju par pasūtījumiem",
+    "secondTitle": "Jūsu menedžeris:",
+    "text": "Ja jums ir konkrētas jautājumi par sadarbības nosacījumu skaidrošanu, lūdzu, sazinieties ar mūsu pieņemtajiem vadītājiem.",
+    "text2": "Vairumtirdzniecības cenas un atlaidēm",
+    "emailUs": "Sūtiet mums e-pastu:",
+    "firstName": "Vārds:",
+    "phone": "Telefona numurs:"
+  }
+}

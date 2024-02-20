@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { FaUser } from "react-icons/fa";
 
-const UserMark = (user) => {
+const UserMark = ({user, client}) => {
   return (
     <div className="flex flex-row items-center gap-5">
       <div className="flex flex-col items-end">
         <span className="font-bold">{user?.username || "MatrixSoftLabs"}</span>
-        {user?.rule || "Client"}
+        {user?.rule || client}
       </div>
       {user.image ? (
         <Image

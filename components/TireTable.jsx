@@ -22,22 +22,22 @@ const rows = [
   }
 ];
 
-const columns = [
-  {
-    key: "wires",
-    name: "Tires"
-  },
-  {
-    key: "summer",
-    name: "Summer"
-  },
-  {
-    key: "winter",
-    name: "Winter"
-  }
-];
+export default function TireTable({t}) {
+  const columns = [
+    {
+      key: "wires",
+      name: t("Tires")
+    },
+    {
+      key: "summer",
+      name: t("Summer")
+    },
+    {
+      key: "winter",
+      name: t("Winter")
+    }
+  ];
 
-export default function TireTable() {
   return (
     <table className="w-full">
       <thead >

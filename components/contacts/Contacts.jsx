@@ -1,40 +1,5 @@
 import Map from "./Map";
-
-const rows1 = [
-  {
-    key: "1",
-    name: "Working time",
-    info: "P- Pk. 9:00 - 18:00"
-  },
-  {
-    key: "2",
-    name: "Store / Warehouse address",
-    info: "Krustpils lela 6, Riga, LV-1073"
-  },
-  {
-    key: "3",
-    name: "Office phone number",
-    info: "+371 26606262"
-  },
-  {
-    key: "4",
-    name: "E-mail",
-    info: "info@tireshop.lv"
-  }
-];
-
-const rows2 = [
-  {
-    key: "1",
-    name: "Phone num.",
-    info: "+371 26916199"
-  },
-  {
-    key: "2",
-    name: "E-mail",
-    info: "kredit@tireshop.lv"
-  }
-];
+import { useTranslations } from "next-intl";
 
 const columns = [
   {
@@ -48,6 +13,44 @@ const columns = [
 ];
 
 const Contacts = () => {
+  const t = useTranslations("Contacts");
+  console.log(t("workingTime"));
+  const rows1 = [
+    {
+      key: "1",
+      name: t("workingTime"),
+      info: "P- Pk. 9:00 - 18:00"
+    },
+    {
+      key: "2",
+      name: t("storeAddress"),
+      info: "Krustpils lela 6, Riga, LV-1073"
+    },
+    {
+      key: "3",
+      name: t("officePhone"),
+      info: "+371 26606262"
+    },
+    {
+      key: "4",
+      name: t("e-mail"),
+      info: "info@tireshop.lv"
+    }
+  ];
+  
+  const rows2 = [
+    {
+      key: "1",
+      name: t("phone"),
+      info: "+371 26916199"
+    },
+    {
+      key: "2",
+      name: t("e-mail"),
+      info: "kredit@tireshop.lv"
+    }
+  ];
+
   return (
     <section className="w-full flex flex-col">
       <table className="w-full text-base">

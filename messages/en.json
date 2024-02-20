@@ -1,0 +1,46 @@
+{
+  "LeftSidebar": {
+    "tyres": "Tyres",
+    "rims": "Rims",
+    "browse": "Browse",
+    "butteries": "Butteries",
+    "myOrders": "My Orders",
+    "discs": "Discs",
+    "add": "Add",
+    "cart": "Cart",
+    "information": "Information",
+    "english": "English"
+  },
+  "Header": {
+    "home": "Home",
+    "client": "Client"
+  },
+  "Offers": {
+    "contacts": "Contacts",
+    "basicDiscounts": "Basic Discounts"
+  },
+  "BasicDiscount": {
+    "car": "CAR",
+    "tire": "TIRE",
+    "engine": "ENGINE",
+    "Tires": "Tires",
+    "Summer": "Summer",
+    "Winter": "Winter"
+  },
+  "Contacts": {
+    "workingTime": "Working time",
+    "storeAddress": "Store / Warehouse address",
+    "officePhone": "Office phone number",
+    "e-mail": "E-mail",
+    "phone": "Phone num."
+  },
+  "OrderInformation": {
+    "firstTitle": "Find out information about orders",
+    "secondTitle": "Your manager:",
+    "text": "If you have specific questions about clarifying the terms of cooperation, please contact our hired managers.",
+    "text2": "Wholesale prices and discounts",
+    "emailUs": "Email us:",
+    "firstName": "First Name:",
+    "phone": "Phone number:"
+  }
+}

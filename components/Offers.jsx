@@ -3,8 +3,10 @@
 import { useState } from "react";
 import BasicDiscount from "./BasicDiscount";
 import Contacts from "./contacts/Contacts";
+import { useTranslations } from "next-intl";
 
 const Offers = () => {
+  const t = useTranslations('Offers');
   const [selectedItem, setSelectedItem] = useState("Basic Discounts");
 
   const handleItemClick = (item) => {
@@ -24,13 +26,13 @@ const Offers = () => {
           className={getItemClassName("Contacts")}
           onClick={() => handleItemClick("Contacts")}
         >
-          Contacts
+          {t("contacts")}
         </p>
         <p
           className={getItemClassName("Basic Discounts")}
           onClick={() => handleItemClick("Basic Discounts")}
         >
-          Basic Discounts
+          {t("basicDiscounts")}
         </p>
       </div>
       {selectedItem === "Basic Discounts" ? <BasicDiscount /> : <Contacts />}
