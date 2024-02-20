@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import LeftSide from "@/components/LeftSide";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +12,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} flex flex-row bg-[#1d1d1d]`}>
+        <LeftSide />
+        <main className="w-10/12 border mt-8 mr-8 rounded-t-3xl bg-slate-100">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
