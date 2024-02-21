@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
 import { IoMdSearch, IoMdInformationCircle } from "react-icons/io";
 import { PiCalculator } from "react-icons/pi";
 import { CiFileOn } from "react-icons/ci";
@@ -9,7 +9,7 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import Image from "next/image";
 import { FaCarBattery } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import LanguageDropdown from "./LanguageDropdown";
 
 const DropdownItem = ({ icon, text }) => (
@@ -21,7 +21,8 @@ const DropdownItem = ({ icon, text }) => (
 
 const LeftSidebar = ({ modal }) => {
   const [isPanding, startTransition] = useTransition();
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
+  const path = usePathname();
+  const [selectedLanguage, setSelectedLanguage] = useState(path.slice(1));
   const router = useRouter();
   const t = useTranslations("LeftSidebar");
 
@@ -32,10 +33,9 @@ const LeftSidebar = ({ modal }) => {
   };
 
   const onSelectChange = (e) => {
-    const nextLocal = e.target.value;
-    setSelectedLanguage(nextLocal);
+    setSelectedLanguage(e);
     startTransition(() => {
-      router.replace(`/${nextLocal}`);
+      router.replace(`/${e}`);
     });
   };
 
@@ -44,7 +44,7 @@ const LeftSidebar = ({ modal }) => {
       className={
         modal
           ? "w-[300px] text-white p-6 transition delay-150 flex flex-col"
-          : "xl:fixed h-[100vh] xl:flex xl:flex-col xl:w-3/12 hidden max-w-[400px] text-white p-6 transition delay-150 w-0"
+          : "xl:fixed h-[100vh] xl:flex xl:flex-col xl:w-3/12 hidden max-w-[380px] text-white p-6 transition delay-150 w-0"
       }
     >
       <div>

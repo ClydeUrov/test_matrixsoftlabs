@@ -1,7 +1,6 @@
 import { TiMail } from "react-icons/ti";
 import { FiPhone } from "react-icons/fi";
 import { FaRegUser } from "react-icons/fa6";
-import { Divider } from "@nextui-org/react";
 import { useTranslations } from "next-intl";
 
 const ContactInfo = ({ icon, title, content }) => (
@@ -15,7 +14,7 @@ const ContactInfo = ({ icon, title, content }) => (
         <p>{content}</p>
       </div>
     </div>
-    <Divider className="my-4 max-w-[220px] bg-slate-400 ml-auto" />
+    <div className="my-4 max-w-[220px] bg-slate-400 ml-auto h-[1px]"></div>
   </>
 );
 
@@ -29,7 +28,7 @@ const ContactSection = ({ title, children }) => (
 const OrderInformation = () => {
   const t = useTranslations("OrderInformation");
   return (
-    <div className="w-6/12 lg:mt-14 bg-[#1d1d1d] text-white min-w-52 text-[15px] rounded-[24px] py-6 pl-6 h-fit">
+    <div className="w-6/12 lg:mt-12 bg-[#1d1d1d] text-white min-w-80 text-[15px] rounded-[24px] py-6 pl-6 h-fit">
       <ContactSection title={t("firstTitle")}>
         <ContactInfo
           icon={<TiMail className="mb-1" size={27} />}

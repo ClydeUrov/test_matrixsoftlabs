@@ -21,7 +21,7 @@ export default function RootLayout({ children, params: {locale} }) {
           <MobileNav />
           <div className="flex flex-row">
             <LeftSidebar />
-            <main className="border mt-7 mr-7 rounded-t-3xl bg-slate-100 xl:ml-[25%] ml-7 w-[100%]">
+            <main className="border mt-7 mr-7 rounded-t-3xl bg-slate-100 xl:ml-[24%] ml-7 w-[100%]">
               {children}
             </main>
           </div>

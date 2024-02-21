@@ -53,24 +53,40 @@ const Contacts = () => {
   return (
     <section className="w-full flex flex-col text-black">
       <table className="w-full text-base">
-        <tbody >
-          {rows1.map((row) =>
+        <thead>
+          <tr>
+            {columns.map((column) => (
+              <th key={column.key} className="px-4 py-2">{column.label}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows1.map((row) => (
             <tr key={row.key} className="border-y border-gray-300">
-              {columns.map((column) =>
+              {columns.map((column) => (
                 <td key={column.key} className="px-4 py-2">{row[column.key]}</td>
-              )}
+              ))}
             </tr>
-          )}
+          ))}
         </tbody>
-        <h4 className="font-bold my-2 ml-4">Stationery contacts</h4>
-        <tbody >
-          {rows2.map((row) =>
+      </table>
+      <h4 className="font-bold my-2 ml-4">Stationery contacts</h4>
+      <table className="w-full text-base">
+        <thead>
+          <tr>
+            {columns.map((column) => (
+              <th key={column.key} className="px-4 py-2">{column.label}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows2.map((row) => (
             <tr key={row.key} className="border-b border-gray-300">
-              {columns.map((column) =>
+              {columns.map((column) => (
                 <td key={column.key} className="px-4 py-2">{row[column.key]}</td>
-              )}
+              ))}
             </tr>
-          )}
+          ))}
         </tbody>
       </table>
       <div id="map" className="mt-8">
