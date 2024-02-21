@@ -2,8 +2,25 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+### Cloning the Repository:
 
+- Open your terminal or command prompt.
+- Use the git clone command followed by the URL of the GitHub repository to clone the repository to your local machine. For example:
+```bash
+git clone https://github.com/ClydeUrov/test_matrixsoftlabs.git
+```
+### Installation:
+
+- Navigate into the cloned repository directory using the cd command:
+```bash
+cd test_matrixsoftlabs
+```
+- If the project has any dependencies, you may need to install them. Typically, you can find instructions for installation in the project's README or documentation. You might use a package manager like npm (for Node.js projects) to install dependencies. For example:
+```bash
+npm install
+```
+
+### Run project:
 ```bash
 npm run dev
 # or
