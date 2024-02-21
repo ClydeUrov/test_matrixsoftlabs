@@ -14,7 +14,6 @@ const columns = [
 
 const Contacts = () => {
   const t = useTranslations("Contacts");
-  console.log(t("workingTime"));
   const rows1 = [
     {
       key: "1",
@@ -52,7 +51,7 @@ const Contacts = () => {
   ];
 
   return (
-    <section className="w-full flex flex-col">
+    <section className="w-full flex flex-col text-black">
       <table className="w-full text-base">
         <tbody >
           {rows1.map((row) =>

@@ -25,7 +25,8 @@
     "engine": "ENGINE",
     "Tires": "Tires",
     "Summer": "Summer",
-    "Winter": "Winter"
+    "Winter": "Winter",
+    "application": "Application"
   },
   "Contacts": {
     "workingTime": "Working time",

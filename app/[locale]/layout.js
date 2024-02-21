@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import LeftSidebar from "../../components/navigation/LeftSidebar";
 import {NextIntlClientProvider, useMessages} from 'next-intl';
+import MobileNav from "@/components/MobileNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,11 +17,14 @@ export default function RootLayout({ children, params: {locale} }) {
   return (
     <html lang={locale}>
       <NextIntlClientProvider messages={messages} locale={locale} >
-        <body className={`${inter.className} flex flex-row bg-[#1d1d1d]`}>
-          <LeftSidebar />
-          <main className="w-10/12 border mt-8 mr-8 rounded-t-3xl bg-slate-100">
-            {children}
-          </main>
+        <body className={`${inter.className} bg-[#1d1d1d]`}>
+          <MobileNav />
+          <div className="flex flex-row">
+            <LeftSidebar />
+            <main className="border mt-7 mr-7 rounded-t-3xl bg-slate-100 xl:ml-[25%] ml-7 w-[100%]">
+              {children}
+            </main>
+          </div>
         </body>
       </NextIntlClientProvider>
     </html>

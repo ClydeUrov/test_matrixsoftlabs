@@ -12,8 +12,8 @@ const Header = () => {
         <p className="text-base">{t("home")}</p>
         <FaAngleRight size={14} />
       </div>
-      <div className="flex gap-12 items-center">
-        <UserMark user={user} client={t("home")} />
+      <div className="flex lg:gap-10 gap-2 items-center">
+        <UserMark user={user} client={t("client")} />
         <RxExit size={30} />
       </div>
     </header>

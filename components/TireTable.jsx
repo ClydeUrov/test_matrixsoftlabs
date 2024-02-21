@@ -1,26 +1,6 @@
 import { IoIosSunny } from "react-icons/io";
 import { TbSnowflake } from "react-icons/tb";
-
-const rows = [
-  {
-    key: "1",
-    wires: "GoodYear",
-    summer: "25",
-    winter: "34"
-  },
-  {
-    key: "2",
-    wires: "Michelin",
-    summer: "12",
-    winter: "32"
-  },
-  {
-    key: "3",
-    wires: "Bridgestone",
-    summer: "54",
-    winter: "32"
-  }
-];
+import { TireRows } from "@/constants/TableRows";
 
 export default function TireTable({t}) {
   const columns = [
@@ -54,7 +34,7 @@ export default function TireTable({t}) {
         </tr>
       </thead>
       <tbody >
-        {rows.map((row) =>
+        {TireRows.map((row) =>
           <tr key={row.key} className="border-y border-gray-300">
             {columns.map((column) =>
               <td key={column.key} className="px-4 py-2">{row[column.key]} {column.key === "wires" || "summer" && " %"}</td>

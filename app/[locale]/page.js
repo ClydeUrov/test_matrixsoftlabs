@@ -8,13 +8,13 @@ import {NextUIProvider} from "@nextui-org/react";
 export default function Home() {
   return (
     <NextUIProvider>
-      <main className="flex min-h-screen flex-col items-center gap-6 p-8">
+      <div className="flex min-h-screen flex-col items-center gap-6 p-8">
         <Header />
-        <section className="flex w-full">
+        <section className="flex w-full justify-center flex-wrap xl:flex-nowrap">
           <Offers />
           <OrderInformation />
         </section>
-      </main>
+      </div>
     </NextUIProvider>
   );
 }

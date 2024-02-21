@@ -25,7 +25,8 @@
     "engine": "DZINĒJS",
     "Tires": "Riepas",
     "Summer": "Vasaras",
-    "Winter": "Ziemas"
+    "Winter": "Ziemas",
+    "application": "Pieteikums"
   },
   "Contacts": {
     "workingTime": "Darba laiks",
