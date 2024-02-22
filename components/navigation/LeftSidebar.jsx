@@ -45,7 +45,7 @@ const LeftSidebar = ({ modal }) => {
       className={
         modal
           ? "w-[300px] text-white p-6 transition delay-150 flex flex-col"
-          : "xl:fixed h-[100vh] xl:flex xl:flex-col xl:w-3/12 hidden max-w-[380px] text-white p-6 transition delay-150 w-0"
+          : "xl:fixed h-[100vh] xl:flex xl:flex-col xl:w-[20%] hidden  text-white p-6 transition delay-150 w-0"
       }
     >
       <Image

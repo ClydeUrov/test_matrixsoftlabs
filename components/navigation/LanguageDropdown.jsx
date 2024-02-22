@@ -9,7 +9,7 @@ import {
 } from "../ui/select";
 
 const LanguageDropdown = ({ selectedLanguage, onSelectChange, modal }) => (
-  <div className={modal ? "leftSideButton" : "bottom-5 left-6 absolute flex items-center w-full mt-auto cursor-pointer" }>
+  <div className={`${modal ? "leftSideButton" : "bottom-5 left-6 absolute flex items-center w-full mt-auto cursor-pointer"}`}>
     <Select value={selectedLanguage} onValueChange={onSelectChange}>
       <SelectTrigger className="xl:w-[65%] w-[100%] bg-[#1d1d1d] text-white border-0 border-transparent px-0">
         <SelectValue>

@@ -9,11 +9,11 @@ export const CustomLeftSideButton = ({ image, name, number, faDown, onClick }) =
       {image}
       <p className="text-base">{name}</p>
     </span>
-    {number >= 0 && (
+    {number >= 0 ? (
       <span className="bg-white w-6 text-black rounded-md flex items-center justify-center h-full">
         {number}
       </span>
-    )}
-    {faDown && faDown}
+    ) : undefined}
+    {faDown ? faDown : undefined}
   </div>
 );

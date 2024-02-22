@@ -24,22 +24,18 @@ const Offers = () => {
         <Tabs defaultValue='basicDiscounts' >
           <TabsList className="gap-6 bg-transparent mb-3">
             <TabsTrigger 
-              className={`border-b-2 text-[20px] hover:border-[#2B71AF] font-medium ${
-                currentTab === 0 ? 'border-b-[#2B71AF]' : ''
-              }`}
+              className={`border-b-2 text-[20px] hover:border-[#2B71AF] font-medium ${currentTab === 0 ? 'border-b-[#2B71AF]' : ''}`}
               onClick={() => setCurrentTab(0)} 
               value='contacts'
             >
-              <span className={currentTab === 0 && "text-[#2B71AF]"}>{t('contacts')}</span>
+              <span className={currentTab === 0 ? "text-[#2B71AF]" : ""}>{t('contacts')}</span>
             </TabsTrigger>
             <TabsTrigger 
-              className={`border-b-2 text-[20px] font-medium hover:border-[#2B71AF] ${
-                currentTab === 1 ? 'border-b-[#2B71AF]' : ''
-              }`}
+              className={`border-b-2 text-[20px] hover:border-[#2B71AF] font-medium ${currentTab === 1 ? 'border-b-[#2B71AF]' : ''}`}
               onClick={() => setCurrentTab(1)} 
               value='basicDiscounts'
             >
-              <span className={currentTab === 1 && "text-[#2B71AF]"}>{t('basicDiscounts')}</span>
+              <span className={currentTab === 1 ? "text-[#2B71AF]": ''}>{t('basicDiscounts')}</span>
             </TabsTrigger>
           </TabsList>
           <TabsContent value='contacts'>
