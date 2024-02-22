@@ -1,5 +1,12 @@
 import Map from "./Map";
 import { useTranslations } from "next-intl";
+import { 
+  Table, 
+  TableBody,
+  TableCell,
+  TableHeader,
+  TableRow, 
+} from "../ui/table";
 
 const columns = [
   {
@@ -51,48 +58,30 @@ const Contacts = () => {
   ];
 
   return (
-    <section className="w-full flex flex-col text-black">
-      <table className="w-full text-base">
-        <thead>
-          <tr>
-            {columns.map((column) => (
-              <th key={column.key} className="px-4 py-2">{column.label}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
+    <div className="w-full flex flex-col text-black">
+      <Table>
+        <TableHeader hidden>
+        </TableHeader>
+        <TableBody className="text-[16px]">
           {rows1.map((row) => (
-            <tr key={row.key} className="border-y border-gray-300">
-              {columns.map((column) => (
-                <td key={column.key} className="px-4 py-2">{row[column.key]}</td>
-              ))}
-            </tr>
+            <TableRow key={row.key} className="hover:bg-gray-200 cursor-pointer border-b-gray-300">
+              <TableCell className="font-medium break-words">{row.name}</TableCell>
+              <TableCell className="font-medium break-words">{row.info} %</TableCell>
+            </TableRow>
           ))}
-        </tbody>
-      </table>
-      <h4 className="font-bold my-2 ml-4">Stationery contacts</h4>
-      <table className="w-full text-base">
-        <thead>
-          <tr>
-            {columns.map((column) => (
-              <th key={column.key} className="px-4 py-2">{column.label}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
+          <h4 className="font-bold w-full my-4 ml-4">{t("contacts")}:</h4>
           {rows2.map((row) => (
-            <tr key={row.key} className="border-b border-gray-300">
-              {columns.map((column) => (
-                <td key={column.key} className="px-4 py-2">{row[column.key]}</td>
-              ))}
-            </tr>
+            <TableRow key={row.key} className="hover:bg-gray-200 cursor-pointer border-b-gray-300">
+              <TableCell className="font-medium break-words">{row.name}</TableCell>
+              <TableCell className="font-medium break-words">{row.info} %</TableCell>
+            </TableRow>
           ))}
-        </tbody>
-      </table>
+        </TableBody>
+      </Table>
       <div id="map" className="mt-8">
         <Map />
       </div>
-    </section>
+    </div>
   )
 }
 

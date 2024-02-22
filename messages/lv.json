@@ -33,7 +33,8 @@
     "storeAddress": "Veikala / Noliktavas adrese",
     "officePhone": "Biroja telefona numurs",
     "e-mail": "E-pasts",
-    "phone": "Telefona numurs"
+    "phone": "Telefona numurs",
+    "contacts": "Kancelejas preču kontakti"
   },
   "OrderInformation": {
     "firstTitle": "Uzziniet informāciju par pasūtījumiem",

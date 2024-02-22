@@ -33,7 +33,8 @@
     "storeAddress": "Store / Warehouse address",
     "officePhone": "Office phone number",
     "e-mail": "E-mail",
-    "phone": "Phone num."
+    "phone": "Phone num.",
+    "contacts": "Stationery contacts"
   },
   "OrderInformation": {
     "firstTitle": "Find out information about orders",

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useTransition } from "react";
+import { useState, useTransition } from "react";
 import { IoMdSearch, IoMdInformationCircle } from "react-icons/io";
 import { PiCalculator } from "react-icons/pi";
 import { CiFileOn } from "react-icons/ci";
@@ -11,6 +11,7 @@ import { FaCarBattery } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import LanguageDropdown from "./LanguageDropdown";
+import { CustomLeftSideButton } from "../CustomLeftSideButton";
 
 const DropdownItem = ({ icon, text }) => (
   <div className="flex border-b border-gray-200/25 p-2">
@@ -47,29 +48,23 @@ const LeftSidebar = ({ modal }) => {
           : "xl:fixed h-[100vh] xl:flex xl:flex-col xl:w-3/12 hidden max-w-[380px] text-white p-6 transition delay-150 w-0"
       }
     >
-      <div>
-        <Image
-          src="/assets/tireshop.png"
-          alt="TireShop"
-          className={modal ? "my-2": "my-8"}
-          width={246}
-          height={34}
-        />
-      </div>
-
-      <div className="leftSideButton justify-between" onClick={toggleDropdown}>
-        <span className="flex items-center">
-          <IoMdSearch className="text-[40px] mr-8" />
-          <p className="text-base">{t("browse")}</p>
-        </span>
-        <FaSortDown className="text-base ml-2" />
-      </div>
+      <Image
+        src="/assets/tireshop.png"
+        alt="TireShop"
+        className={modal ? "my-2" : "my-8"}
+        width={246}
+        height={34}
+      />
+      <CustomLeftSideButton
+        image={<IoMdSearch className="text-[40px] mr-8" />}
+        name={t("browse")}
+        faDown={<FaSortDown className="text-base ml-2" />}
+        onClick={toggleDropdown}
+      />
       {isDropdownOpen && (
-        <div
-          className={`ml-3 ${
-            isDropdownOpen ? "animate-slideDown" : "animate-slideUp"
-          }`}
-        >
+        <div className={`ml-3 ${
+          isDropdownOpen ? "animate-slideDown" : "animate-slideUp"
+        }`}>
           <DropdownItem
             icon={
               <Image
@@ -100,31 +95,27 @@ const LeftSidebar = ({ modal }) => {
           />
         </div>
       )}
-      <div className="leftSideButton">
-        <PiCalculator className="text-[40px] mr-8" />
-        <p className="text-base">{t("myOrders")}</p>
-      </div>
-      <div className="leftSideButton">
-        <CiFileOn className="text-[40px] mr-8" />
-        <p className="text-base">{t("discs")}</p>
-      </div>
-      <div className="leftSideButton">
-        <FaCircleHalfStroke className="text-[40px] mr-8" />
-        <p className="text-base">{t("add")}</p>
-      </div>
-      <div className="leftSideButton justify-between">
-        <span className="flex items-center">
-          <MdOutlineShoppingCart className="text-[40px] mr-8" />
-          <p className="text-base">{t("cart")}</p>
-        </span>
-        <span className="bg-white w-6 text-black rounded-md flex items-center justify-center h-full">
-          0
-        </span>
-      </div>
-      <div className="leftSideButton">
-        <IoMdInformationCircle className="text-[40px] mr-8" />
-        <p className="text-base">{t("information")}</p>
-      </div>
+      <CustomLeftSideButton
+        image={<PiCalculator className="text-[40px] mr-8" />}
+        name={t("myOrders")}
+      />
+      <CustomLeftSideButton
+        image={<CiFileOn className="text-[40px] mr-8" />}
+        name={t("discs")}
+      />
+      <CustomLeftSideButton
+        image={<FaCircleHalfStroke className="text-[40px] mr-8" />}
+        name={t("add")}
+      />
+      <CustomLeftSideButton
+        image={<MdOutlineShoppingCart className="text-[40px] mr-8" />}
+        name={t("cart")}
+        number={0}
+      />
+      <CustomLeftSideButton
+        image={<IoMdInformationCircle className="text-[40px] mr-8" />}
+        name={t("information")}
+      />
       <LanguageDropdown
         selectedLanguage={selectedLanguage}
         onSelectChange={onSelectChange}
